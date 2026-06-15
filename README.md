@@ -6,8 +6,10 @@ This project is a responsive website for **Layali**, a local café in **Magharib
 Layali specializes in:
 -  Milkshakes
 -  Mojitos
+-  Iced coffes
+-  Matcha beverages
 -  Waffles
--  Mug Cookie Crumbs
+-  Mugcake Crumbs
 
 ## Objectives
 - Create an online presence for Layali.
