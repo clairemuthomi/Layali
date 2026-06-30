@@ -1,0 +1,46 @@
+const menuItems = [
+  {name:"Ceremonial Matcha Latte", cat:"matcha", price:"KSh 480"},
+  {name:"Iced Matcha Latte", cat:"matcha", price:"KSh 480"},
+  {name:"Signature Espresso", cat:"coffee", price:"KSh 250"},
+  {name:"Cold Brew", cat:"coffee", price:"KSh 420"},
+  {name:"Hibiscus Ginger Tea", cat:"drinks", price:"KSh 300"},
+  {name:"Mango Smoothie", cat:"drinks", price:"KSh 450"},
+  {name:"Avocado Toast", cat:"breakfast", price:"KSh 650"},
+  {name:"Shakshuka", cat:"breakfast", price:"KSh 700"},
+  {name:"Pesto Pasta", cat:"mains", price:"KSh 800"},
+  {name:"Buddha Bowl", cat:"mains", price:"KSh 820"},
+  {name:"Croissant", cat:"pastry", price:"KSh 280"},
+  {name:"Cinnamon Roll", cat:"pastry", price:"KSh 310"},
+  {name:"Chocolate Lava Cake", cat:"dessert", price:"KSh 590"},
+  {name:"Tiramisu", cat:"dessert", price:"KSh 560"}
+];
+
+function renderMenu(filter="all"){
+  const grid = document.getElementById("menuGrid");
+  grid.innerHTML = "";
+
+  const filtered = filter === "all"
+    ? menuItems
+    : menuItems.filter(item => item.cat === filter);
+
+  filtered.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+      <h3>${item.name}</h3>
+      <p>${item.cat.toUpperCase()}</p>
+      <strong>${item.price}</strong>
+    `;
+
+    grid.appendChild(card);
+  });
+}
+
+// initial render
+renderMenu();
+
+// filter function (you can hook buttons later)
+function filterMenu(cat){
+  renderMenu(cat);
+}
