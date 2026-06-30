@@ -1,0 +1,21 @@
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin-bottom:30px;
+}
+
+.filters button{
+  padding:8px 16px;
+  border-radius:20px;
+  border:1px solid #7ab648;
+  background:transparent;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.filters button:hover{
+  background:#7ab648;
+  color:black;
+}
