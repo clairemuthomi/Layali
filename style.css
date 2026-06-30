@@ -1,0 +1,119 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  background:#f8fdf5;
+  color:#0f1f14;
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:#0a1a0e;
+  color:white;
+}
+
+.nav-logo em{ color:#7ab648; }
+
+.nav-links{
+  display:flex;
+  gap:20px;
+  list-style:none;
+}
+
+.nav-links a{
+  color:#b5d99c;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  color:white;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background:url("https://images.unsplash.com/photo-1545239351-ef35f43d514b") center/cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(10,26,14,0.7);
+}
+
+.hero-content{
+  position:relative;
+}
+
+.hero h1{
+  font-size:5rem;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+/* MENU */
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+}
+
+/* CARD */
+.card{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+}
+
+/* BUTTONS */
+.btn-primary{
+  background:#7ab648;
+  padding:10px 20px;
+  color:black;
+  text-decoration:none;
+  border-radius:30px;
+}
+
+.btn-ghost{
+  border:1px solid white;
+  padding:10px 20px;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-box{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+}
