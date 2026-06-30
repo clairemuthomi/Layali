@@ -1,0 +1,8 @@
+<div class="rewards">
+  <h3>⭐ Loyalty Rewards</h3>
+
+  <p>Points: <span id="points">0</span></p>
+  <p>Tier: <span id="tier">Bronze</span></p>
+
+  <button onclick="redeem()">Redeem 10% Discount</button>
+</div>
