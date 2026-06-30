@@ -1,0 +1,17 @@
+.card{
+  position:relative;
+  overflow:hidden;
+}
+
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, transparent, rgba(122,182,72,0.15), transparent);
+  transform:translateX(-100%);
+  transition:0.5s;
+}
+
+.card:hover::before{
+  transform:translateX(100%);
+}
