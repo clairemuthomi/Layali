@@ -1,0 +1,72 @@
+<section class="menu">
+  <h2 class="title">Our Signature Menu</h2>
+
+  <div class="menu-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" />
+      <h3>Vanilla Latte</h3>
+      <p>Silky espresso blended with vanilla cream.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" />
+      <h3>Matcha Bliss</h3>
+      <p>Soft Japanese matcha with creamy milk foam.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521305916504-4a1121188589" />
+      <h3>Caramel Espresso</h3>
+      <p>Bold espresso balanced with caramel drizzle.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.menu {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 5px;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  color: #666;
+}
+</style>
