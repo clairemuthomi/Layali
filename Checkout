@@ -1,0 +1,64 @@
+<script>
+let points = 0;
+let discountApplied = false;
+
+function updateRewards(amountSpent) {
+  // 1 point per $1 spent
+  points += Math.floor(amountSpent);
+
+  document.getElementById("points").innerText = points;
+
+  updateTier();
+}
+
+function updateTier() {
+  let tier = "Bronze";
+
+  if (points >= 50) tier = "Silver";
+  if (points >= 120) tier = "Gold";
+
+  document.getElementById("tier").innerText = tier;
+}
+
+function redeem() {
+  if (points < 30) {
+    alert("Not enough points yet ☕");
+    return;
+  }
+
+  if (discountApplied) {
+    alert("Discount already applied.");
+    return;
+  }
+
+  discountApplied = true;
+  points -= 30;
+
+  document.getElementById("points").innerText = points;
+  updateTier();
+
+  alert("🎁 10% discount applied to your next order!");
+}
+
+
+function checkout() {
+  if (cart.length === 0) {
+    alert("Cart is empty ☕");
+    return;
+  }
+
+  let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+  if (discountApplied) {
+    total *= 0.9; // 10% discount
+    discountApplied = false;
+  }
+
+  alert("Order placed! Total: $" + total.toFixed(2));
+
+  updateRewards(total);
+
+  cart = [];
+  renderCart();
+}
+</script>
