@@ -1,0 +1,68 @@
+<style>
+.shop-menu {
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.shop-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.shop-item {
+  width: 220px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.shop-item button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.shop-item button:hover {
+  background: #333;
+}
+
+/* CART PANEL */
+.cart {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 260px;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.cart li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.cart button {
+  border: none;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
