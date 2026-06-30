@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Payment - Layali Café</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Inter;
+  background:#fbfbfb;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.box{
+  width:420px;
+  background:white;
+  padding:30px;
+  border:1px solid #eee;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+h1{
+  font-family:'Cormorant Garamond';
+  text-align:center;
+}
+
+input, select{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:1px solid #ddd;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#111;
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+.summary{
+  background:#fafafa;
+  padding:10px;
+  margin-bottom:10px;
+  border:1px solid #eee;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Checkout ☕</h1>
+
+  <div class="summary" id="summary">
+    Loading order...
+  </div>
+
+  <input type="text" placeholder="Card Number">
+  <input type="text" placeholder="Name on Card">
+  <input type="text" placeholder="Expiry Date (MM/YY)">
+  <input type="text" placeholder="CVV">
+
+  <select>
+    <option>M-Pesa</option>
+    <option>Visa</option>
+    <option>MasterCard</option>
+  </select>
+
+  <button onclick="pay()">Pay Now</button>
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+document.getElementById("summary").innerHTML =
+  cart.map(i => `<p>${i.item} - Ksh ${i.price}</p>`).join("")
+  + `<hr><b>Total: Ksh ${total}</b>`;
+
+function pay(){
+  if(total === 0){
+    alert("Cart is empty ☕");
+    return;
+  }
+
+  alert("Payment Successful ☕✨ Thank you for ordering!");
+  localStorage.removeItem("cart");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
