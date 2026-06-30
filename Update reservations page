@@ -1,0 +1,18 @@
+function submitReservation(e){
+  e.preventDefault();
+
+  const name = document.getElementById("fname").value;
+  const email = document.getElementById("email").value;
+
+  if(name.length < 2){
+    alert("Please enter a valid name");
+    return;
+  }
+
+  if(!email.includes("@")){
+    alert("Please enter a valid email");
+    return;
+  }
+
+  document.getElementById("modal").style.display = "flex";
+}
