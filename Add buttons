@@ -1,0 +1,10 @@
+<div class="filters">
+  <button onclick="filterMenu('all')">All</button>
+  <button onclick="filterMenu('matcha')">Matcha</button>
+  button onclick="filterMenu('coffee')">Coffee</button>
+  <button onclick="filterMenu('drinks')">Drinks</button>
+  <button onclick="filterMenu('breakfast')">Breakfast</button>
+  <button onclick="filterMenu('mains')">Mains</button>
+  <button onclick="filterMenu('pastry')">Pastry</button>
+  <button onclick="filterMenu('dessert')">Dessert</button>
+</div>
