@@ -1,0 +1,53 @@
+<section class="reserve">
+  <h2>Reserve a Table</h2>
+
+  <form class="reserve-form">
+    <input type="text" placeholder="Full Name" required />
+    <input type="date" required />
+    <input type="time" required />
+    <input type="number" placeholder="Guests" min="1" max="10" required />
+
+    <button type="submit">Confirm Reservation</button>
+  </form>
+</section>
+
+<style>
+.reserve {
+  padding: 100px 60px;
+  background: #fafafa;
+  text-align: center;
+}
+
+.reserve h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.reserve-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.reserve-form input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.reserve-form button {
+  padding: 12px;
+  border: none;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reserve-form button:hover {
+  background: #333;
+}
+</style>
