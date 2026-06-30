@@ -1,0 +1,91 @@
+<section class="contact">
+  <h2>Contact Us</h2>
+
+  <div class="contact-container">
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Visit Us</h3>
+      <p>Layali Café, Westlands District</p>
+      <p>Nairobi, Kenya</p>
+
+      <h3>Call</h3>
+      <p>+254 712 345 678</p>
+
+      <h3>Email</h3>
+      <p>hello@layalicafe.com</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="6"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+<style>
+.contact {
+  padding: 100px 60px;
+  background: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.contact-container {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  text-align: left;
+  max-width: 300px;
+}
+
+.contact-info h3 {
+  margin-top: 20px;
+  font-size: 22px;
+}
+
+.contact-info p {
+  color: #555;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #333;
+}
+</style>
